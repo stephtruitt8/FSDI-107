@@ -7,10 +7,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          🛍 <h1>My Online Store</h1>
+          🛍 <h1>Barto's Arts and Crafts</h1>
         </div>
         <div className="navbar-menu">
-          <ul className="navbar-nav">
+          <ul className="fa-list">
             <li className="nav-item">
               <a href="#home" className="nav-link">Home</a>
             </li>

@@ -1,7 +1,10 @@
 
 import './App.css'
+import 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Catalog from './pages/Catalog';
+
 
 function App() {
 
@@ -9,9 +12,9 @@ function App() {
     <>
       <div>
         <Navbar />
-        <h1>Hello from React</h1>
+        <Catalog />
       
-      <Footer />
+        <Footer />
       </div>
     </>
   )
