@@ -3,6 +3,9 @@ import { useState } from "react";
 
 function QuantityPicker(){
 
+
+
+
     const [quantity, setQuantity] = useState(1);
     //      name     function         initial Value
 
@@ -16,6 +19,7 @@ function QuantityPicker(){
     function handleIncrease(){
         let temporalValue = quantity + 1;
         setQuantity(temporalValue);
+        props.onChange (temporalValue);
     }
 
     function handleDecrease(){
@@ -24,6 +28,7 @@ function QuantityPicker(){
             return;
         }
         setQuantity(temporalValue);
+        props.onChange (temporalValue);
     }
 
     // create the handleDecrease function
