@@ -72,6 +72,12 @@ function Navbar() {
           </Link>
         </li>
 
+        <li className="nav-item">
+          <Link className="nav-link" to={"/admin"}>
+            Admin
+          </Link>
+        </li>
+
         {/* <li className="nav-item dropdown">
           <a
             className="nav-link dropdown-toggle"

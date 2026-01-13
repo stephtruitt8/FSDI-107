@@ -17,9 +17,20 @@
 
 // export default About
 
+import { useState } from 'react'
 import "./About.css";
 
 function About() {
+  const [isEmailVisible, setIsEmailVisible] = useState(true);
+
+  function showEmailInfomation() {
+    setIsEmailVisible(true)
+  }
+
+  function hideEmailInfomation() {
+    setIsEmailVisible(false)
+  }
+
   return (
     <div className="about">
       {/* Hero */}
@@ -92,6 +103,19 @@ function About() {
         </p>
         <a className="about-btn primary" href="/contact">Let’s talk</a>
       </section>
+
+
+        {
+            isEmailVisible == true 
+            ? <p className='text-primary fs-5'>stephtruitt8@gmail.com</p> 
+            : <p className='text-info fs-5'>Click the button below to see my email address</p>
+        }
+
+        {/* <button class="btn btn-success">Hide my email / Show my email</button> */}
+
+        <button class="btn btn-secondary me-3" onClick={hideEmailInfomation}>Hide my email</button>
+        <button class="btn btn-primary" onClick={showEmailInfomation}>Show my email</button>
+
     </div>
   );
 }
