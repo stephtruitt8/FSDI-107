@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Link } from 'react-router-dom'
+import GlobalContext from '../state/globalContext';
 
 import "./Navbar.css";
 
 
 // NEW CODE: Complete Navbar component implementation
 function Navbar() {
+  const user = useContext(GlobalContext).user
+
   return (
     // <nav className="navbar">
     //   <div className="navbar-container">
@@ -122,6 +126,11 @@ function Navbar() {
           Search
         </button>
       </form> */}
+
+        <div>
+          <div className="text-primary">{user.name}</div>
+        </div>
+
     </div>
   </div>
 </nav>

@@ -28,6 +28,12 @@ function saveProduct() {
     }
 
     setProducts([...products, newProduct])
+
+    setProductTitle()
+    setProductCategory()
+    setProductImage()
+    setProductPrice()
+    
 }
 
 function saveCoupon() {
@@ -133,7 +139,7 @@ function saveCoupon() {
                         src={product.image}
                         className="card-img-top"
                         alt={product.title}
-                        style={{ height: "160px", objectFit: "cover" }}
+                        style={{width: "100%", height: "160px", objectFit: "cover" }}
                         />
 
                         <div className="card-body">
