@@ -24,9 +24,8 @@ function Home() {
           <h1>
             Welcome to <span>Barto’s Arts & Crafts</span>
           </h1>
-          <p>
-            Creative supplies made for artists, students, and makers who want
-            quality tools without the overwhelm.
+          <p className>
+            Creative supplies made for artists, students, and makers seeking thoughtfully curated, high-quality tools—without the overwhelm of endless choices.
           </p>
 
           <div className="home-welcome__actions">

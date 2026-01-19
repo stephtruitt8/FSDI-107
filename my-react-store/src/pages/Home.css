@@ -4,6 +4,31 @@
   padding: 2.5rem 1.5rem 4rem;
 }
 
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 150, 0.35), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(180, 220, 255, 0.35), transparent 45%),
+    linear-gradient(135deg, #fffaf2, #f6fbff);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+  animation: grain 6s steps(10) infinite;
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-5%, -5%); }
+}
+
+
 /* Welcome */
 .home-welcome {
   display: grid;
@@ -31,9 +56,10 @@
 
 .home-welcome__actions {
   display: flex;
-  gap: 12px;
+  gap: 1rem;
   margin-top: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home-welcome__image img {
@@ -131,3 +157,4 @@
     grid-template-columns: 1fr;
   }
 }
+

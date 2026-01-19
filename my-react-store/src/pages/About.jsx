@@ -56,7 +56,7 @@ function About() {
         </div>
       </header>
 
-      {/* Values */}
+      {/* Values
       <section className="about-section">
         <h2>What we stand for</h2>
 
@@ -76,7 +76,7 @@ function About() {
             <p>Questions, recommendations, project ideas — we’re here for it.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Stats */}
       <section className="about-stats">

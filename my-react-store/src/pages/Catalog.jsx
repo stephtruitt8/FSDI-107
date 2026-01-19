@@ -49,21 +49,29 @@ function Catalog(){
 
 
     return(
-        <div className="catalog">
-            <h1>Our Catalog</h1>
+        <div>
+            <h1>Our shop</h1>
 
             {/* please render back all the products */}
             {/* You need to create a function that clear the filter  */}
 
-            <button className="btn btn-outline-dark me-2 text-capitalize" onClick={clearFilter}>All</button>
-            {categories.map(cat => <button key={cat} onClick={()=>filter(cat)} >{cat}</button>)}
+            <button 
+            className="btn btn-outline-dark me-2 text-capitalize" 
+            onClick={clearFilter}>All</button>
+
+            {categories.map(
+                cat => <button key={cat} onClick={()=>filter(cat)} >{cat}</button>)}
+            
+            
             {
             /* for (i=0, i<categories.at.length;i++)
                 let cat = categories[i];
                 <button>{cat}</button>
             */}
-            {productsToShow.map(prod => <Product key={prod._id} data={prod}/>)}
-        
+
+
+            <div className="catalog">{productsToShow.map(prod => <Product key={prod._id} data={prod}/>)}
+            </div>
         </div>
     );
 }

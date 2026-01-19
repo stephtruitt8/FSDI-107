@@ -16,14 +16,14 @@ const catalog= [
         "_id":"2",
     },
     {
-        "title":"Hat",
+        "title":"Custom Hat",
         "category":"merchandise",
         "price":40.00,
         "image":"/images/hat.jpg",
         "_id":"3",
     },
     {
-        "title":"Customjacket",
+        "title":"Custom Jacket",
         "category":"clothing",
         "price":70.00,
         "image":"images/jacket.jpg",

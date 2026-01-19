@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from 'react-router-dom'
-import GlobalContext from '../state/globalContext';
+import GlobalContext from '../state/GlobalContext'
+import { IconShoppingCart } from '@tabler/icons-react';
+
 
 import "./Navbar.css";
 
@@ -8,6 +10,17 @@ import "./Navbar.css";
 // NEW CODE: Complete Navbar component implementation
 function Navbar() {
   const user = useContext(GlobalContext).user
+  const cart = useContext(GlobalContext).cart
+
+  function getTotalItems() {
+    let sum = 0
+
+    for (let i = 0; i < cart.length; i++) {
+        sum = sum + cart[i].quantity
+    }
+
+    return sum
+  }
 
   return (
     // <nav className="navbar">
@@ -34,7 +47,7 @@ function Navbar() {
     //   </div>
     // </nav>
 
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-success navbar-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
      🎨 Barto's Arts&Crafts
@@ -115,6 +128,27 @@ function Navbar() {
         </li> */}
        
       </ul>
+
+
+       
+       <div className="d-flex align-items-center gap-2">
+            <div className="text-info">{user.name}</div>
+
+            {/* <Link to={"/cart"} className='btn btn-outline-dark'>
+            <IconShoppingCart/> Cart
+            </Link> */}
+
+            <Link to={"/cart"} className="btn btn-outline-dark position-relative">
+            <IconShoppingCart /> Cart
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {getTotalItems()}
+            </span>
+</Link>
+
+       </div>
+
+       
+
       {/* <form className="d-flex" role="search">
         <input
           className="form-control me-2"
@@ -127,9 +161,9 @@ function Navbar() {
         </button>
       </form> */}
 
-        <div>
+        {/* <div>
           <div className="text-primary">{user.name}</div>
-        </div>
+        </div> */}
 
     </div>
   </div>
